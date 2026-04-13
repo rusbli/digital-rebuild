@@ -1,0 +1,11 @@
+# Test screenshots
+*.png
+*.jpg
+*.jpeg
+
+# Playwright output
+.playwright-mcp/
+
+# OS files
+.DS_Store
+Thumbs.db
