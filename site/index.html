@@ -6,9 +6,10 @@
   <title>Digital Rebuild — Modern Websites for UK Small Businesses</title>
   <meta name="description" content="Digital Rebuild builds modern, professional websites for UK small businesses that get you found, trusted, and hired.">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site information">
-  <link rel="preconnect" href="https://api.fontshare.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="Assets/lucide.min.js"></script>
   <style>
     /* === DESIGN TOKENS === */
     :root {
@@ -339,52 +340,63 @@
 
     /* === WHY SECTION === */
     .why { background: var(--color-surface); }
-    .why__inner { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: center; }
-    @media (min-width: 900px) { .why__inner { grid-template-columns: 1fr 1fr; } }
+    .why__header { margin-bottom: 48px; }
+    .why__lower { margin-top: 56px; }
+    .why__lower .why__points { margin-top: 0; margin-bottom: 0; }
+    @media (min-width: 768px) {
+      .why__lower { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    }
 
-    /* Abstract before/after visual */
-    .why__visual { position: relative; height: 380px; }
-    .why__vis-card {
-      position: absolute; background: var(--color-surface-raised);
-      border-radius: var(--radius-md); border: 1px solid var(--color-border);
-      padding: 20px; overflow: hidden;
+    /* === PORTFOLIO GRID === */
+    .portfolio-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
     }
-    .why__vis-card--before {
-      left: 0; top: 24px; bottom: 24px; width: 54%;
-      box-shadow: var(--shadow-sm);
+    @media (max-width: 640px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+    .portfolio-item {
+      border-radius: var(--radius-md); overflow: hidden;
+      border: 1px solid #2e2e2b; background: #1a1a18;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
     }
-    .why__vis-card--after {
-      right: 0; top: 0; bottom: 0; width: 57%;
-      border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
-      box-shadow: var(--shadow-lg);
+    .portfolio-item:hover { transform: translateY(-5px); box-shadow: 0 30px 55px rgba(0,0,0,0.6); }
+
+    .portfolio-chrome {
+      background: #2a2a28; padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid #333;
     }
-    .why__vis-label {
-      font-size: 10px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.1em; margin-bottom: 12px;
+    .portfolio-dots { display: flex; gap: 5px; flex-shrink: 0; }
+    .portfolio-dots span { width: 9px; height: 9px; border-radius: 50%; display: block; }
+    .portfolio-dots span:nth-child(1) { background: #ff5f57; }
+    .portfolio-dots span:nth-child(2) { background: #ffbd2e; }
+    .portfolio-dots span:nth-child(3) { background: #27c93f; }
+    .portfolio-url {
+      flex: 1; background: #1e1e1c; border-radius: 5px;
+      padding: 4px 10px; font-size: 11px; color: #666;
+      font-family: monospace; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
-    .why__vis-card--before .why__vis-label { color: var(--color-text-muted); }
-    .why__vis-card--after .why__vis-label { color: var(--color-accent); }
-    .why__vis-lines { display: flex; flex-direction: column; gap: 7px; }
-    .why__vis-line { height: 7px; border-radius: 4px; background: var(--color-border); }
-    .why__vis-line--w90 { width: 90%; }
-    .why__vis-line--w70 { width: 70%; }
-    .why__vis-line--w80 { width: 80%; }
-    .why__vis-line--w50 { width: 50%; }
-    .why__vis-card--before .why__vis-line { opacity: 0.5; }
-    .why__vis-btn {
-      margin-top: 14px; height: 22px; border-radius: 11px;
-      background: color-mix(in srgb, var(--color-accent) 15%, transparent); width: 64px;
+
+    .portfolio-screen { overflow: hidden; height: 280px; }
+    .portfolio-screen img {
+      width: 100%; height: auto; display: block;
+      transition: transform 7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: translateY(0);
     }
-    .why__vis-card--after .why__vis-btn { background: var(--color-accent); }
-    .why__vis-stat {
-      position: absolute; bottom: 20px; left: 20px; right: 20px;
-      background: var(--color-surface); border-radius: var(--radius-sm);
-      padding: 10px 12px; display: flex; align-items: center; gap: 10px;
-      border: 1px solid var(--color-border);
+    .portfolio-item:hover .portfolio-screen img { transform: translateY(-65%); }
+
+    .portfolio-caption {
+      padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid #2a2a28;
     }
-    .why__vis-stat-num { font-family: var(--font-display); font-size: 1.625rem; font-weight: 800; color: var(--color-accent); }
-    .why__vis-stat-text { font-size: 11px; color: var(--color-text-muted); line-height: 1.35; }
-    .why__vis-card--before .why__vis-stat { display: none; }
+    .portfolio-caption-name {
+      font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; color: #ccc;
+    }
+    .portfolio-caption-tag {
+      font-size: 11px; font-weight: 600; color: var(--color-accent);
+      background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+      padding: 3px 10px; border-radius: var(--radius-full);
+    }
 
     .why__points { display: flex; flex-direction: column; gap: 20px; margin: 32px 0; }
     .why__point { display: flex; gap: 16px; align-items: flex-start; }
@@ -740,89 +752,120 @@
     <!-- WHY DIGITAL REBUILD -->
     <section class="section--alt why" id="why" aria-labelledby="why-heading">
       <div class="container">
-        <div class="why__inner">
-          <!-- Visual -->
-          <div class="why__visual" data-reveal aria-hidden="true">
-            <div class="why__vis-card why__vis-card--before">
-              <div class="why__vis-label">Before</div>
-              <div class="why__vis-lines">
-                <div class="why__vis-line why__vis-line--w90"></div>
-                <div class="why__vis-line why__vis-line--w70"></div>
-                <div class="why__vis-line why__vis-line--w80"></div>
-                <div class="why__vis-line why__vis-line--w50"></div>
-                <div class="why__vis-line why__vis-line--w90"></div>
-                <div class="why__vis-line why__vis-line--w60" style="width:60%"></div>
-              </div>
-              <div class="why__vis-btn"></div>
-            </div>
-            <div class="why__vis-card why__vis-card--after">
-              <div class="why__vis-label">After</div>
-              <div class="why__vis-lines">
-                <div class="why__vis-line why__vis-line--w90" style="height:10px;background:var(--color-text);"></div>
-                <div class="why__vis-line why__vis-line--w70" style="height:10px;background:var(--color-text);opacity:0.5;"></div>
-                <div class="why__vis-line why__vis-line--w80"></div>
-                <div class="why__vis-line why__vis-line--w50"></div>
-                <div class="why__vis-line why__vis-line--w90"></div>
-              </div>
-              <div class="why__vis-btn"></div>
-              <div class="why__vis-stat">
-                <div class="why__vis-stat-num">3x</div>
-                <div class="why__vis-stat-text">more enquiries<br>within 90 days</div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Content -->
-          <div data-reveal data-reveal-delay="1">
-            <p class="section__label">Why Digital Rebuild</p>
-            <h2 class="section__heading" id="why-heading">
-              We care about results, not just good-looking sites.
-            </h2>
-
-            <div class="why__points">
-              <div class="why__point">
-                <span class="why__check" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                </span>
-                <div>
-                  <p class="why__point-title">Average client sees 3x more enquiries</p>
-                  <p class="why__point-desc">Our clients typically double or triple their inbound enquiries within 90 days of launch, thanks to conversion-focused design and built-in SEO.</p>
-                </div>
-              </div>
-              <div class="why__point">
-                <span class="why__check" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                </span>
-                <div>
-                  <p class="why__point-title">Sites load in under 2 seconds</p>
-                  <p class="why__point-desc">Every site we build is hand-coded for performance. No bloated page builders, no unnecessary plugins — just lean, fast code that Google rewards.</p>
-                </div>
-              </div>
-              <div class="why__point">
-                <span class="why__check" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                </span>
-                <div>
-                  <p class="why__point-title">You own everything, always</p>
-                  <p class="why__point-desc">No proprietary lock-in, no holding your domain hostage. Your code, your domain, your content — all yours from day one.</p>
-                </div>
-              </div>
-              <div class="why__point">
-                <span class="why__check" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                </span>
-                <div>
-                  <p class="why__point-title">Launched in 3 weeks, not 3 months</p>
-                  <p class="why__point-desc">Our streamlined process gets you live fast. Discovery, design, build, and launch — all done in three focused weeks with daily communication throughout.</p>
-                </div>
-              </div>
-            </div>
-
-            <blockquote class="why__pullquote">
-              <p>"Most of our clients see three times more enquiries within 90 days of going live. A website that doesn't convert is just an expensive brochure."</p>
-            </blockquote>
-          </div>
+        <div class="why__header" data-reveal>
+          <p class="section__label">Why Digital Rebuild</p>
+          <h2 class="section__heading" id="why-heading">
+            We care about results, not just good-looking sites.
+          </h2>
         </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" data-reveal data-reveal-delay="1">
+
+          <div class="portfolio-item">
+            <div class="portfolio-chrome">
+              <div class="portfolio-dots"><span></span><span></span><span></span></div>
+              <div class="portfolio-url">aquapro.co.uk</div>
+            </div>
+            <div class="portfolio-screen">
+              <img src="Assets/Gemini_Generated_Image_jngfhjngfhjngfhj.png" alt="AquaPro — South Wales plumbing website built by Digital Rebuild" loading="lazy">
+            </div>
+            <div class="portfolio-caption">
+              <span class="portfolio-caption-name">AquaPro Plumbing</span>
+              <span class="portfolio-caption-tag">Plumbing &amp; Heating</span>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <div class="portfolio-chrome">
+              <div class="portfolio-dots"><span></span><span></span><span></span></div>
+              <div class="portfolio-url">fastflowplumbing.co.uk</div>
+            </div>
+            <div class="portfolio-screen">
+              <img src="Assets/Gemini_Generated_Image_lcpbzdlcpbzdlcpb.png" alt="FastFlow Plumbing — Manchester plumbing website built by Digital Rebuild" loading="lazy">
+            </div>
+            <div class="portfolio-caption">
+              <span class="portfolio-caption-name">FastFlow Plumbing</span>
+              <span class="portfolio-caption-tag">Emergency Services</span>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <div class="portfolio-chrome">
+              <div class="portfolio-dots"><span></span><span></span><span></span></div>
+              <div class="portfolio-url">meridianplumbing.co.uk</div>
+            </div>
+            <div class="portfolio-screen">
+              <img src="Assets/Gemini_Generated_Image_odwtwuodwtwuodwt (1).png" alt="Meridian Plumbing &amp; Heating — website built by Digital Rebuild" loading="lazy">
+            </div>
+            <div class="portfolio-caption">
+              <span class="portfolio-caption-name">Meridian Plumbing &amp; Heating</span>
+              <span class="portfolio-caption-tag">London &amp; Home Counties</span>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <div class="portfolio-chrome">
+              <div class="portfolio-dots"><span></span><span></span><span></span></div>
+              <div class="portfolio-url">clearwater.co.uk</div>
+            </div>
+            <div class="portfolio-screen">
+              <img src="Assets/Gemini_Generated_Image_z4z5ibz4z5ibz4z5.png" alt="Clearwater — Barry South Wales plumbing website built by Digital Rebuild" loading="lazy">
+            </div>
+            <div class="portfolio-caption">
+              <span class="portfolio-caption-name">Clearwater</span>
+              <span class="portfolio-caption-tag">Barry, South Wales</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Why points below the comparison -->
+        <div class="why__lower" data-reveal data-reveal-delay="2">
+          <div class="why__points">
+            <div class="why__point">
+              <span class="why__check" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <p class="why__point-title">Average client sees 3x more enquiries</p>
+                <p class="why__point-desc">Our clients typically double or triple their inbound enquiries within 90 days of launch, thanks to conversion-focused design and built-in SEO.</p>
+              </div>
+            </div>
+            <div class="why__point">
+              <span class="why__check" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <p class="why__point-title">Sites load in under 2 seconds</p>
+                <p class="why__point-desc">Every site we build is hand-coded for performance. No bloated page builders, no unnecessary plugins — just lean, fast code that Google rewards.</p>
+              </div>
+            </div>
+            <div class="why__point">
+              <span class="why__check" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <p class="why__point-title">You own everything, always</p>
+                <p class="why__point-desc">No proprietary lock-in, no holding your domain hostage. Your code, your domain, your content — all yours from day one.</p>
+              </div>
+            </div>
+            <div class="why__point">
+              <span class="why__check" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <div>
+                <p class="why__point-title">Launched in 3 weeks, not 3 months</p>
+                <p class="why__point-desc">Our streamlined process gets you live fast. Discovery, design, build, and launch — all done in three focused weeks with daily communication throughout.</p>
+              </div>
+            </div>
+          </div>
+          <blockquote class="why__pullquote">
+            <p>"Most of our clients see three times more enquiries within 90 days of going live. A website that doesn't convert is just an expensive brochure."</p>
+          </blockquote>
+        </div>
+
       </div>
     </section>
 
@@ -1013,7 +1056,7 @@
           No contracts. No jargon. Free 30-minute discovery call — see results within 30 days of launch.
         </p>
         <div data-reveal data-reveal-delay="3">
-          <a href="mailto:hello@digitalrebuild.co.uk" class="btn btn--primary btn--lg">Book Your Free Call</a>
+          <a href="#" class="btn btn--primary btn--lg js-email" data-u="hello" data-d="digitalrebuild.co.uk">Book Your Free Call</a>
         </div>
       </div>
     </section>
@@ -1059,7 +1102,7 @@
         <div>
           <p class="footer__col-title">Contact</p>
           <ul class="footer__links">
-            <li><a href="mailto:hello@digitalrebuild.co.uk">hello@digitalrebuild.co.uk</a></li>
+            <li><a href="#" class="js-email js-email--show" data-u="hello" data-d="digitalrebuild.co.uk"></a></li>
             <li><a href="tel:+441234567890">+44 (0) 1234 567 890</a></li>
             <li><a href="#contact">Free discovery call</a></li>
             <li style="color:#555550;pointer-events:none;">Barry, South Wales</li>
@@ -1068,7 +1111,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copy">&copy; 2026 Digital Rebuild Ltd. Built by Digital Rebuild.</p>
+        <p class="footer__copy">&copy; <span id="yr"></span> Digital Rebuild Ltd. Built by Digital Rebuild.</p>
         <div class="footer__socials" aria-label="Social media links">
           <a href="https://linkedin.com" class="footer__social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1171,6 +1214,17 @@
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+
+    // === EMAIL OBFUSCATION ===
+    document.querySelectorAll('.js-email').forEach(function(el) {
+      var addr = el.getAttribute('data-u') + '@' + el.getAttribute('data-d');
+      el.href = 'mailto:' + addr;
+      if (el.classList.contains('js-email--show')) el.textContent = addr;
+    });
+
+    // === DYNAMIC COPYRIGHT YEAR ===
+    var yrEl = document.getElementById('yr');
+    if (yrEl) yrEl.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

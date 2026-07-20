@@ -1,0 +1,2 @@
+put -r site/* /public/
+put site/.htaccess /public/.htaccess

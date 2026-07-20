@@ -1,0 +1,58 @@
+name: Deploy website to IONOS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/deploy.sftp"
+      - ".github/ionos_known_hosts"
+      - ".github/workflows/deploy-ionos.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ionos-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Upload static site over SFTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Install SFTP password helper
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes sshpass
+
+      - name: Configure pinned IONOS host key
+        run: |
+          install -d -m 700 "$HOME/.ssh"
+          install -m 600 .github/ionos_known_hosts "$HOME/.ssh/known_hosts"
+
+      - name: Deploy site to IONOS
+        env:
+          IONOS_SFTP_HOST: ${{ secrets.IONOS_SFTP_HOST }}
+          IONOS_SFTP_USERNAME: ${{ secrets.IONOS_SFTP_USERNAME }}
+          SSHPASS: ${{ secrets.IONOS_SFTP_PASSWORD }}
+        run: |
+          sshpass -e sftp \
+            -oBatchMode=no \
+            -oStrictHostKeyChecking=yes \
+            -oUserKnownHostsFile="$HOME/.ssh/known_hosts" \
+            -P 22 \
+            -b .github/deploy.sftp \
+            "$IONOS_SFTP_USERNAME@$IONOS_SFTP_HOST"
+
+      - name: Verify live Basic price
+        run: |
+          curl --fail --silent --show-error --retry 5 --retry-delay 3 \
+            "https://digitalrebuild.co.uk/?deployment=${GITHUB_SHA}" \
+            | grep --fixed-strings --quiet '<sup>£</sup>199'
