@@ -55,4 +55,4 @@ jobs:
         run: |
           curl --fail --silent --show-error --retry 5 --retry-delay 3 \
             "https://digitalrebuild.co.uk/?deployment=${GITHUB_SHA}" \
-            | grep --fixed-strings --quiet '<sup>£</sup>199'
+            | grep --fixed-strings --quiet '<sup>£</sup>299'

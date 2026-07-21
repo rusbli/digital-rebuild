@@ -1,2 +1,6 @@
 put -r site/* /public/
+put site/index.html /public/index.html
+put site/llms.txt /public/llms.txt
+put site/robots.txt /public/robots.txt
+put site/sitemap.xml /public/sitemap.xml
 put site/.htaccess /public/.htaccess
