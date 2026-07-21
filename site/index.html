@@ -84,8 +84,9 @@
     @media (min-width: 1200px) { .container { padding: 0 48px; } }
 
     /* === SCROLL REVEAL === */
-    [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-    [data-reveal].visible { opacity: 1; transform: none; }
+    [data-reveal] { opacity: 1; transform: none; transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .js [data-reveal] { opacity: 0; transform: translateY(20px); }
+    .js [data-reveal].visible { opacity: 1; transform: none; }
     [data-reveal-delay="1"] { transition-delay: 0.1s; }
     [data-reveal-delay="2"] { transition-delay: 0.2s; }
     [data-reveal-delay="3"] { transition-delay: 0.3s; }
@@ -494,6 +495,18 @@
       padding: 10px 20px; margin-top: 20px;
     }
     .founding__note svg { width: 16px; height: 16px; color: var(--color-accent); flex-shrink: 0; stroke-width: 2; }
+    .founding__trust {
+      display: grid; grid-template-columns: 1fr; gap: 12px;
+      margin: 32px auto 40px; max-width: 680px; text-align: left;
+    }
+    @media (min-width: 640px) { .founding__trust { grid-template-columns: repeat(2,1fr); } }
+    .founding__trust-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 14px 16px; background: var(--color-surface-raised);
+      border: 1px solid var(--color-border); border-radius: var(--radius-md);
+      color: var(--color-text); font-size: var(--text-sm); line-height: 1.55;
+    }
+    .founding__trust-item svg { width: 18px; height: 18px; color: var(--color-accent); flex-shrink: 0; margin-top: 2px; stroke-width: 2.25; }
 
     /* === FINAL CTA === */
     .cta-final {
@@ -511,6 +524,27 @@
     .cta-final__sub { font-size: var(--text-lg); color: #6B6B65; margin-bottom: 40px; }
     .cta-final .btn--primary { background: #01696f; }
     .cta-final .btn--primary:hover { background: #015458; }
+    .contact-form {
+      max-width: 720px; margin: 0 auto; text-align: left;
+      display: grid; gap: 16px; padding: 28px;
+      background: #181816; border: 1px solid #2e2e2b; border-radius: var(--radius-lg);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+    }
+    .contact-form__grid { display: grid; gap: 16px; }
+    @media (min-width: 640px) { .contact-form__grid { grid-template-columns: repeat(2,1fr); } }
+    .contact-form label { display: grid; gap: 6px; color: #EFEFEC; font-weight: 700; font-size: var(--text-sm); }
+    .contact-form input, .contact-form textarea {
+      width: 100%; min-height: 48px; padding: 12px 14px;
+      border-radius: var(--radius-sm); border: 1px solid #333330;
+      background: #0f0f0e; color: #EFEFEC; font: inherit;
+    }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid #01969e; outline-offset: 2px; }
+    .contact-form__full { grid-column: 1 / -1; }
+    .contact-form__note { color: #8A8A82; font-size: var(--text-sm); line-height: 1.6; margin: 0; }
+    .contact-form__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .contact-form__phone { color: #EFEFEC; font-size: var(--text-sm); }
+    .contact-form__phone a { color: #01969e; font-weight: 700; }
 
     /* === FOOTER === */
     .footer { background: #0a0a09; padding: 64px 0 0; }
@@ -573,7 +607,7 @@
             <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
             <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
-          <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+          <a href="#contact" class="btn btn--primary">Get a Free Website Check</a>
           <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
             <span></span><span></span><span></span>
           </button>
@@ -598,7 +632,7 @@
         <a href="#contact" class="mobile-nav-link">Contact</a>
       </nav>
       <div class="nav__mobile-cta">
-        <a href="#contact" class="btn btn--primary mobile-nav-link">Get a Free Quote</a>
+        <a href="#contact" class="btn btn--primary mobile-nav-link">Get a Free Website Check</a>
       </div>
     </div>
   </div>
@@ -609,16 +643,16 @@
       <div class="container">
         <div class="hero__inner">
           <div class="hero__content">
-            <p class="hero__eyebrow" data-reveal>UK Web Design Agency</p>
+            <p class="hero__eyebrow" data-reveal>Barry &amp; South Wales Web Design</p>
             <h1 class="hero__heading" id="hero-heading" data-reveal data-reveal-delay="1">
               We rebuild your<br><em>digital presence.</em>
             </h1>
             <p class="hero__sub" data-reveal data-reveal-delay="2">
-              Modern websites that get UK small businesses found, trusted, and hired — without the agency faff.
+              Affordable websites and website rebuilds for UK small businesses — built to load fast, look professional, and turn visitors into enquiries.
             </p>
             <div class="hero__ctas" data-reveal data-reveal-delay="3">
-              <a href="#contact" class="btn btn--primary btn--lg">Get a Free Quote</a>
-              <a href="#why" class="btn btn--ghost btn--lg">See Our Work</a>
+              <a href="#contact" class="btn btn--primary btn--lg">Get a Free Website Check</a>
+              <a href="#why" class="btn btn--ghost btn--lg">See Example Rebuilds</a>
             </div>
           </div>
 
@@ -754,10 +788,11 @@
       <div class="container">
 
         <div class="why__header" data-reveal>
-          <p class="section__label">Why Digital Rebuild</p>
+          <p class="section__label">Example rebuild styles</p>
           <h2 class="section__heading" id="why-heading">
-            We care about results, not just good-looking sites.
+            Clean, modern websites for local service businesses.
           </h2>
+          <p class="section__sub">A few sample layouts showing the kind of fast, conversion-focused sites Digital Rebuild can create for trades and local businesses.</p>
         </div>
 
         <!-- Portfolio Grid -->
@@ -773,7 +808,7 @@
             </div>
             <div class="portfolio-caption">
               <span class="portfolio-caption-name">AquaPro Plumbing</span>
-              <span class="portfolio-caption-tag">Plumbing &amp; Heating</span>
+              <span class="portfolio-caption-tag">Sample concept</span>
             </div>
           </div>
 
@@ -787,7 +822,7 @@
             </div>
             <div class="portfolio-caption">
               <span class="portfolio-caption-name">FastFlow Plumbing</span>
-              <span class="portfolio-caption-tag">Emergency Services</span>
+              <span class="portfolio-caption-tag">Sample concept</span>
             </div>
           </div>
 
@@ -801,7 +836,7 @@
             </div>
             <div class="portfolio-caption">
               <span class="portfolio-caption-name">Meridian Plumbing &amp; Heating</span>
-              <span class="portfolio-caption-tag">London &amp; Home Counties</span>
+              <span class="portfolio-caption-tag">Sample concept</span>
             </div>
           </div>
 
@@ -815,7 +850,7 @@
             </div>
             <div class="portfolio-caption">
               <span class="portfolio-caption-name">Clearwater</span>
-              <span class="portfolio-caption-tag">Barry, South Wales</span>
+              <span class="portfolio-caption-tag">Sample concept</span>
             </div>
           </div>
 
@@ -829,8 +864,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
               </span>
               <div>
-                <p class="why__point-title">Average client sees 3x more enquiries</p>
-                <p class="why__point-desc">Our clients typically double or triple their inbound enquiries within 90 days of launch, thanks to conversion-focused design and built-in SEO.</p>
+                <p class="why__point-title">Built around enquiries</p>
+                <p class="why__point-desc">Clear pages, obvious calls to action, and simple contact routes help visitors understand what you do and take the next step.</p>
               </div>
             </div>
             <div class="why__point">
@@ -838,8 +873,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
               </span>
               <div>
-                <p class="why__point-title">Sites load in under 2 seconds</p>
-                <p class="why__point-desc">Every site we build is hand-coded for performance. No bloated page builders, no unnecessary plugins — just lean, fast code that Google rewards.</p>
+                <p class="why__point-title">Fast, lightweight builds</p>
+                <p class="why__point-desc">No bloated page builders or plugin-heavy templates — just clean code designed to feel quick on mobile.</p>
               </div>
             </div>
             <div class="why__point">
@@ -862,7 +897,7 @@
             </div>
           </div>
           <blockquote class="why__pullquote">
-            <p>"Most of our clients see three times more enquiries within 90 days of going live. A website that doesn't convert is just an expensive brochure."</p>
+            <p>"A good small business website should make it obvious what you do, why people should trust you, and how to contact you. That’s what Digital Rebuild focuses on."</p>
           </blockquote>
         </div>
 
@@ -1027,19 +1062,25 @@
     <section class="section founding" id="founding" aria-labelledby="founding-heading">
       <div class="container">
         <div class="founding__inner">
-          <p class="section__label" data-reveal>A honest word</p>
+          <p class="section__label" data-reveal>About Digital Rebuild</p>
           <h2 class="section__heading" id="founding-heading" data-reveal data-reveal-delay="1" style="max-width:100%;text-align:center;">
-            Be one of our first clients.
+            Built by Russell at Digital Rebuild.
           </h2>
           <p class="founding__body" data-reveal data-reveal-delay="2">
-            We're just getting started — and <strong>that works in your favour.</strong> You'll get our full attention, an introductory price, and we'll work harder than any established agency to make sure you're delighted. We're building our reputation one client at a time, and yours matters to us.
+            I help small UK businesses replace outdated, slow or ineffective websites with clean, professional sites that are easy to understand and built around enquiries. The process is simple: no jargon, no bloated agency retainers, and no lock-in.
           </p>
+          <div class="founding__trust" data-reveal data-reveal-delay="3">
+            <div class="founding__trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Based in Barry, South Wales, serving small businesses across the UK.</span></div>
+            <div class="founding__trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Clear fixed-price options so you know what is included before work starts.</span></div>
+            <div class="founding__trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>You own your website, content and domain — no lock-in or hostage-taking.</span></div>
+            <div class="founding__trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Free initial website check before you commit to anything.</span></div>
+          </div>
           <div data-reveal data-reveal-delay="3">
-            <a href="#contact" class="btn btn--primary btn--lg">Book a Free Discovery Call</a>
+            <a href="#contact" class="btn btn--primary btn--lg">Get a Free Website Check</a>
           </div>
           <div class="founding__note" data-reveal data-reveal-delay="4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            No contracts &nbsp;&middot;&nbsp; Free 30-min call &nbsp;&middot;&nbsp; Ask us for a direct reference
+            No contracts &nbsp;&middot;&nbsp; Plain English advice &nbsp;&middot;&nbsp; Clear next steps
           </div>
         </div>
       </div>
@@ -1050,14 +1091,38 @@
       <div class="container">
         <p class="cta-final__label" data-reveal>Let's talk</p>
         <h2 class="cta-final__heading" id="cta-heading" data-reveal data-reveal-delay="1">
-          Ready to rebuild your digital presence?
+          Want a clearer, faster website?
         </h2>
         <p class="cta-final__sub" data-reveal data-reveal-delay="2">
-          No contracts. No jargon. Free 30-minute discovery call — see results within 30 days of launch.
+          Send me your current website and I’ll reply with the three biggest fixes I’d make to help it get more enquiries.
         </p>
-        <div data-reveal data-reveal-delay="3">
-          <a href="#" class="btn btn--primary btn--lg js-email" data-u="hello" data-d="digitalrebuild.co.uk">Book Your Free Call</a>
-        </div>
+        <form class="contact-form" action="mailto:hello@digitalrebuild.co.uk" method="post" enctype="text/plain" data-reveal data-reveal-delay="3">
+          <div class="contact-form__grid">
+            <label>Name
+              <input type="text" name="Name" autocomplete="name" required>
+            </label>
+            <label>Business name
+              <input type="text" name="Business name" autocomplete="organization" required>
+            </label>
+            <label>Email
+              <input type="email" name="Email" autocomplete="email" required>
+            </label>
+            <label>Phone <span style="font-weight:400;color:#8A8A82;">optional</span>
+              <input type="tel" name="Phone" autocomplete="tel">
+            </label>
+            <label class="contact-form__full">Current website <span style="font-weight:400;color:#8A8A82;">optional</span>
+              <input type="url" name="Current website" placeholder="https://example.co.uk">
+            </label>
+            <label class="contact-form__full">What do you need help with?
+              <textarea name="What do you need help with" required placeholder="Tell me if you need a new website, a rebuild, more enquiries, faster loading, or help showing up on Google."></textarea>
+            </label>
+          </div>
+          <p class="contact-form__note">I’ll only use your details to reply about your website. No spam.</p>
+          <div class="contact-form__actions">
+            <button type="submit" class="btn btn--primary btn--lg">Send my website check request</button>
+            <p class="contact-form__phone">Prefer to call? <a href="tel:+447709498894">07709 498894</a></p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -1103,8 +1168,8 @@
           <p class="footer__col-title">Contact</p>
           <ul class="footer__links">
             <li><a href="#" class="js-email js-email--show" data-u="hello" data-d="digitalrebuild.co.uk"></a></li>
-            <li><a href="tel:+441234567890">+44 (0) 1234 567 890</a></li>
-            <li><a href="#contact">Free discovery call</a></li>
+            <li><a href="tel:+447709498894">07709 498894</a></li>
+            <li><a href="#contact">Free website check</a></li>
             <li style="color:#555550;pointer-events:none;">Barry, South Wales</li>
           </ul>
         </div>
