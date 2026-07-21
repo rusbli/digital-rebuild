@@ -1,5 +1,7 @@
-# === HTTPS REDIRECT ===
+# === CANONICAL HOST + HTTPS REDIRECTS ===
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^digitalrebuild\.co\.uk$ [NC]
+RewriteRule ^(.*)$ https://www.digitalrebuild.co.uk/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
