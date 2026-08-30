@@ -630,6 +630,13 @@
     .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid #01969e; outline-offset: 2px; }
     .contact-form__full { grid-column: 1 / -1; }
     .contact-form__note { color: #8A8A82; font-size: var(--text-sm); line-height: 1.6; margin: 0; }
+    .contact-form__status {
+      padding: 12px 14px; border-radius: var(--radius-sm);
+      font-size: var(--text-sm); font-weight: 700; line-height: 1.5;
+    }
+    .contact-form__status--success { color: #b7f7d1; background: #123524; border: 1px solid #287a50; }
+    .contact-form__status--error { color: #ffd0d0; background: #421b1b; border: 1px solid #8f3d3d; }
+    .contact-form__honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
     .contact-form__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
     .contact-form__phone { color: #EFEFEC; font-size: var(--text-sm); }
     .contact-form__phone a { color: #01969e; font-weight: 700; }
@@ -1221,25 +1228,29 @@
         <p class="cta-final__sub" data-reveal data-reveal-delay="2">
           Send me your current website and I’ll reply with the three biggest fixes I’d make to help it get more enquiries.
         </p>
-        <form class="contact-form" action="mailto:hello@digitalrebuild.co.uk" method="post" enctype="text/plain" data-reveal data-reveal-delay="3">
+        <form class="contact-form" action="/contact.php" method="post" data-reveal data-reveal-delay="3">
+          <p id="contactFormStatus" class="contact-form__status" role="status" hidden></p>
           <div class="contact-form__grid">
             <label>Name
-              <input type="text" name="Name" autocomplete="name" required>
+              <input type="text" name="name" autocomplete="name" maxlength="100" required>
             </label>
             <label>Business name
-              <input type="text" name="Business name" autocomplete="organization" required>
+              <input type="text" name="business_name" autocomplete="organization" maxlength="150" required>
             </label>
             <label>Email
-              <input type="email" name="Email" autocomplete="email" required>
+              <input type="email" name="email" autocomplete="email" maxlength="254" required>
             </label>
             <label>Phone <span style="font-weight:400;color:#8A8A82;">optional</span>
-              <input type="tel" name="Phone" autocomplete="tel">
+              <input type="tel" name="phone" autocomplete="tel" maxlength="50">
             </label>
             <label class="contact-form__full">Current website <span style="font-weight:400;color:#8A8A82;">optional</span>
-              <input type="url" name="Current website" placeholder="https://example.co.uk">
+              <input type="url" name="current_website" placeholder="https://example.co.uk" maxlength="500">
             </label>
             <label class="contact-form__full">What do you need help with?
-              <textarea name="What do you need help with" required placeholder="Tell me if you need a new website, a rebuild, more enquiries, faster loading, or help showing up on Google."></textarea>
+              <textarea name="message" maxlength="5000" required placeholder="Tell me if you need a new website, a rebuild, more enquiries, faster loading, or help showing up on Google."></textarea>
+            </label>
+            <label class="contact-form__honeypot" aria-hidden="true">Leave this field empty
+              <input type="text" name="company_website" tabindex="-1" autocomplete="off">
             </label>
           </div>
           <p class="contact-form__note">I’ll only use your details to reply about your website. No spam.</p>
@@ -1412,6 +1423,20 @@
       el.href = 'mailto:' + addr;
       if (el.classList.contains('js-email--show')) el.textContent = addr;
     });
+
+    // === CONTACT FORM RESULT ===
+    var formStatus = document.getElementById('contactFormStatus');
+    var formResult = new URLSearchParams(window.location.search).get('form');
+    if (formStatus && (formResult === 'sent' || formResult === 'error')) {
+      formStatus.hidden = false;
+      if (formResult === 'sent') {
+        formStatus.classList.add('contact-form__status--success');
+        formStatus.textContent = 'Thanks. Your request has been sent and I’ll reply as soon as I can.';
+      } else {
+        formStatus.classList.add('contact-form__status--error');
+        formStatus.textContent = 'Sorry, your request could not be sent. Please email hello@digitalrebuild.co.uk or call 07709 498894.';
+      }
+    }
 
     // === DYNAMIC COPYRIGHT YEAR ===
     var yrEl = document.getElementById('yr');
