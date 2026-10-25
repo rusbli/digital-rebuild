@@ -9,3 +9,8 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Build output
+node_modules/
+dist/
+preview/

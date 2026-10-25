@@ -1,0 +1,21 @@
+{
+  "name": "digital-rebuild-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "preview": "node scripts/build.mjs --drafts",
+    "drafts": "node scripts/drafts.mjs list",
+    "approve": "node scripts/drafts.mjs approve",
+    "publish-next": "node scripts/drafts.mjs publish-next",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "marked": "18.1.0",
+    "yaml": "2.9.1"
+  }
+}

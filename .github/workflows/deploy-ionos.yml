@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "content/articles/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
       - ".github/deploy.sftp"
       - ".github/ionos_known_hosts"
       - ".github/workflows/deploy-ionos.yml"
@@ -26,6 +30,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Build site and blog
+        # Uses the runner's preinstalled Node. Fails, and so blocks the upload,
+        # if any article breaks the content rules in scripts/content.mjs.
+        run: |
+          node --version
+          npm ci --no-audit --no-fund
+          npm run build
 
       - name: Install SFTP password helper
         run: |
@@ -56,3 +68,8 @@ jobs:
           curl --fail --location --silent --show-error --retry 5 --retry-delay 3 \
             "https://digitalrebuild.co.uk/?deployment=${GITHUB_SHA}" \
             | grep --fixed-strings --quiet '<sup>£</sup>299'
+
+      - name: Verify live guides page
+        run: |
+          curl --fail --location --silent --show-error --retry 5 --retry-delay 3 \
+            --output /dev/null "https://www.digitalrebuild.co.uk/blog/?deployment=${GITHUB_SHA}"
