@@ -6,7 +6,7 @@ slug: "small-business-website-cost-uk"
 category: "costs-and-planning"
 primaryKeyword: "how much does a small business website cost uk"
 author: "Russell Blight"
-status: "draft"
+status: "approved"
 scheduled: "2026-10-26"
 faq:
   - q: "How much does a basic small business website cost in the UK?"
