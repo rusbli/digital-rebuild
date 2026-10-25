@@ -6,8 +6,6 @@ slug: "small-business-website-cost-uk"
 category: "costs-and-planning"
 primaryKeyword: "how much does a small business website cost uk"
 author: "Russell Blight"
-status: "approved"
-scheduled: "2026-10-26"
 faq:
   - q: "How much does a basic small business website cost in the UK?"
     a: "It depends on who builds it and what is included. My own fixed prices are £299 for up to three pages and £499 for up to five pages with bespoke design and Google Analytics set up. Other designers price differently, so compare what each quote includes, not just the headline number."
@@ -15,6 +13,8 @@ faq:
     a: "Yes. At minimum you pay for the domain name and hosting every year. You may also pay for a website builder subscription, an email service, or a care plan if you want someone else to handle updates and security."
   - q: "Is a cheap website a false economy?"
     a: "Not always. A small, well-built site that answers customers' questions and makes it easy to contact you can outperform an expensive one. The false economy is paying for something you can't change, can't move, or that hides who owns the domain."
+published: "2026-10-25"
+updated: "2026-10-25"
 ---
 You've asked three people for a website quote and got three answers that don't line up.
 
