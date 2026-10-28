@@ -6,8 +6,6 @@ slug: "business-not-showing-on-google"
 category: "getting-found"
 primaryKeyword: "business not showing on google"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-10-28"
 faq:
   - q: "How do I check if my website is on Google?"
     a: "Search Google for site: followed by your domain, for example site:yourbusiness.co.uk. If pages from your site appear, Google has indexed them. If nothing appears, Google either hasn't found the site yet or something is stopping it from being indexed."
@@ -15,6 +13,8 @@ faq:
     a: "There's no fixed time. Google says some changes take effect in a few hours and others can take several months. Setting up Google Search Console and submitting your sitemap helps Google find the pages, but it doesn't guarantee when or where they appear."
   - q: "Why does my business show on Google Maps but not in normal search results?"
     a: "Your Google Business Profile and your website are separate things. The profile appears in Maps and the local results box; your website appears in the ordinary results underneath. One can be working while the other isn't, so check them separately."
+published: "2026-10-28"
+updated: "2026-10-28"
 ---
 You type your business name into Google and nothing comes up. Or a directory listing comes up, or a competitor, but not you.
 
