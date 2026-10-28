@@ -49,6 +49,11 @@ That gives you three possible problems:
 
 Spend two minutes working out which row you're in. Everything below is in that order.
 
+<figure style="margin: 1.5rem 0;">
+  <a href="/Assets/blog/google-diagnosis.webp" aria-label="Open the Google visibility checklist at full size"><img src="/Assets/blog/google-diagnosis.webp" alt="Three separate checks: use Search Console URL Inspection for a missing website page, review service and area content when found by name only, and check Business Profile status for a missing Maps listing. A site: search is a clue, not a complete indexing test." width="1536" height="1024" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto;"></a>
+  <figcaption>Choose the check that matches your problem. Tap the image to view the checklist at full size.</figcaption>
+</figure>
+
 ## Check 1: does Google know your website exists?
 
 Open Google and search for:
@@ -120,6 +125,11 @@ It's not a perfect test, but it's closer to what a stranger sees.
 ## Check 5: are you in the map results?
 
 The map box is driven by your Google Business Profile, not your website. You can have a perfectly indexed website and still be missing from the map, or the other way round.
+
+<figure style="margin: 1.5rem 0;">
+  <a href="/Assets/blog/google-result-types.webp" aria-label="Open the search-results illustration at full size"><img src="/Assets/blog/google-result-types.webp" alt="Illustration separating map listings, managed through Google Business Profile, from ordinary website results in organic search. Appearing in one does not guarantee appearing in the other." width="1536" height="1024" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto;"></a>
+  <figcaption>Illustration only, not a live Google screenshot. Check map listings and website results separately.</figcaption>
+</figure>
 
 Search for your business name on Google Maps. If you don't appear:
 

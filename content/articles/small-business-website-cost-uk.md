@@ -14,7 +14,7 @@ faq:
   - q: "Is a cheap website a false economy?"
     a: "Not always. A small, well-built site that answers customers' questions and makes it easy to contact you can outperform an expensive one. The false economy is paying for something you can't change, can't move, or that hides who owns the domain."
 published: "2026-10-25"
-updated: "2026-10-25"
+updated: "2026-10-28"
 ---
 You've asked three people for a website quote and got three answers that don't line up.
 
@@ -94,6 +94,11 @@ You can see the full details on the [pricing section](/#pricing) of the homepage
 ## The three questions that make quotes comparable
 
 Here's the practical bit. When the quotes arrive, put them in a simple table with these three columns. It takes ten minutes and it'll tell you more than any sales call.
+
+<figure style="margin: 1.5rem 0;">
+  <a href="/Assets/blog/website-quote-checklist.webp" aria-label="Open the website quote comparison checklist at full size"><img src="/Assets/blog/website-quote-checklist.webp" alt="Compare website quotes in three parts: included pages, content, revisions and support; recurring domain, hosting, email and care costs; and ownership, handover and exit charges. Compare the build fee plus three years of ongoing costs and agreed extras, counting bundled hosting only once." width="1536" height="1024" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto;"></a>
+  <figcaption>Keep this checklist beside your quotes so you compare what is included, ongoing bills and ownership. Tap to view it at full size.</figcaption>
+</figure>
 
 ### 1. What exactly is included?
 
