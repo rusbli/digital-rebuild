@@ -7,7 +7,7 @@ category: "getting-found"
 primaryKeyword: "google business profile for tradespeople"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-02"
+scheduled: "2026-10-30"
 related: ["business-not-showing-on-google", "website-not-getting-enquiries"]
 faq:
   - q: "Can I have a Google Business Profile if I work from home?"

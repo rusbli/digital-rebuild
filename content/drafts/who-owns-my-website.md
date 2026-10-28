@@ -7,7 +7,7 @@ category: "costs-and-planning"
 primaryKeyword: "who owns my website and domain"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-16"
+scheduled: "2026-11-05"
 related: ["small-business-website-cost-uk", "wix-squarespace-or-custom-website"]
 faq:
   - q: "How do I find out who owns my domain name?"

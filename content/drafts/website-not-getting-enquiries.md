@@ -7,7 +7,7 @@ category: "more-enquiries"
 primaryKeyword: "website not getting enquiries"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-10-30"
+scheduled: "2026-10-29"
 related: ["business-not-showing-on-google", "small-business-website-cost-uk"]
 faq:
   - q: "Why do people visit my website but not contact me?"

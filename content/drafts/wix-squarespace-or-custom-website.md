@@ -7,7 +7,7 @@ category: "costs-and-planning"
 primaryKeyword: "wix vs squarespace vs custom website"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-11"
+scheduled: "2026-11-03"
 related: ["small-business-website-cost-uk", "do-i-need-a-website-if-i-have-facebook"]
 faq:
   - q: "Is Wix or Squarespace good enough for a small business?"

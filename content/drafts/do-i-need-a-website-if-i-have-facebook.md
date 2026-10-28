@@ -7,7 +7,7 @@ category: "costs-and-planning"
 primaryKeyword: "do i need a website if i have facebook"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-04"
+scheduled: "2026-10-31"
 related: ["small-business-website-cost-uk", "google-business-profile-for-trades"]
 faq:
   - q: "Is a Facebook page enough for a small business?"

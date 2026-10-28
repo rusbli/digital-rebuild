@@ -7,7 +7,7 @@ category: "getting-found"
 primaryKeyword: "how to get more google reviews"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-09"
+scheduled: "2026-11-02"
 related: ["google-business-profile-for-trades", "business-not-showing-on-google"]
 faq:
   - q: "Can I offer a discount for a Google review?"

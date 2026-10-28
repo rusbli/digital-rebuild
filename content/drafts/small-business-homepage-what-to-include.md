@@ -7,7 +7,7 @@ category: "more-enquiries"
 primaryKeyword: "what to put on a small business homepage"
 author: "Russell Blight"
 status: "draft"
-scheduled: "2026-11-13"
+scheduled: "2026-11-04"
 related: ["website-not-getting-enquiries", "plumber-website-what-to-include"]
 faq:
   - q: "What is the most important thing on a homepage?"
