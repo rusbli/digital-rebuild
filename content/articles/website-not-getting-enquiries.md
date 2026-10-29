@@ -6,8 +6,6 @@ slug: "website-not-getting-enquiries"
 category: "more-enquiries"
 primaryKeyword: "website not getting enquiries"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-10-29"
 related: ["business-not-showing-on-google", "small-business-website-cost-uk"]
 faq:
   - q: "Why do people visit my website but not contact me?"
@@ -16,6 +14,8 @@ faq:
     a: "Install an analytics tool such as Google Analytics, or check the visitor statistics your hosting or website builder provides. Google Search Console also shows how often your site appeared in Google and how many people clicked through."
   - q: "Should my phone number be at the top of my website?"
     a: "For most local service businesses, yes. Many visitors arrive on a phone and want to call. A tappable phone number near the top of every page removes a step between wanting to call and calling."
+published: "2026-10-29"
+updated: "2026-10-29"
 ---
 Your analytics say people are visiting. Maybe a few a day, maybe dozens.
 
