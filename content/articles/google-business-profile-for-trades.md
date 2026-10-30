@@ -6,8 +6,6 @@ slug: "google-business-profile-for-trades"
 category: "getting-found"
 primaryKeyword: "google business profile for tradespeople"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-10-30"
 related: ["business-not-showing-on-google", "website-not-getting-enquiries"]
 faq:
   - q: "Can I have a Google Business Profile if I work from home?"
@@ -16,6 +14,8 @@ faq:
     a: "No, not unless that is genuinely your trading name on your signs and paperwork. Google's guidelines say the name should match how you're known in the real world, and adding extra information can get your profile suspended."
   - q: "How far can my service area go?"
     a: "Google's guidelines say service areas generally shouldn't extend beyond about two hours of driving time from where your business is based, although some businesses may justify a larger area."
+published: "2026-10-30"
+updated: "2026-10-30"
 ---
 If you're a plumber, electrician, roofer or builder, your Google Business Profile might bring in more calls than your website.
 
