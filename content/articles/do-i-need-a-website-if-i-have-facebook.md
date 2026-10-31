@@ -6,8 +6,6 @@ slug: "do-i-need-a-website-if-i-have-facebook"
 category: "costs-and-planning"
 primaryKeyword: "do i need a website if i have facebook"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-10-31"
 related: ["small-business-website-cost-uk", "google-business-profile-for-trades"]
 faq:
   - q: "Is a Facebook page enough for a small business?"
@@ -16,6 +14,8 @@ faq:
     a: "Public Facebook pages can appear in Google results, especially for searches of your business name. But Facebook pages give you little control over how your services are described, so they rarely compete well for searches like 'electrician in Cardiff'."
   - q: "What's cheaper, a website or Facebook?"
     a: "A Facebook page is free to set up. A website costs money to build and a smaller amount every year to keep running. The real comparison is whether the website brings in enough extra work to cover that, which depends on how your customers find you."
+published: "2026-10-31"
+updated: "2026-10-31"
 ---
 Your Facebook page is free. It's where your customers already spend their evenings. You can post photos of your work, reply to messages and collect reviews.
 
