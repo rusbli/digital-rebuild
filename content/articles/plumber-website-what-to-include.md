@@ -6,8 +6,6 @@ slug: "plumber-website-what-to-include"
 category: "more-enquiries"
 primaryKeyword: "plumber website"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-01"
 related: ["website-not-getting-enquiries", "google-business-profile-for-trades"]
 faq:
   - q: "How many pages does a plumber's website need?"
@@ -16,6 +14,8 @@ faq:
     a: "If you can, yes, even if it's a starting price, a call-out fee or a typical range. Customers use prices to decide whether to ring. If every job is different, explain how you price instead, so people know what to expect."
   - q: "Should I show my Gas Safe number on my website?"
     a: "If you or your engineers do gas work, showing your Gas Safe registration number lets customers check you on the Gas Safe Register. It's a strong trust signal for anything involving boilers or gas appliances."
+published: "2026-11-01"
+updated: "2026-11-01"
 ---
 Picture the person on the other end of a plumbing search.
 
