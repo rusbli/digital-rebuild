@@ -6,8 +6,6 @@ slug: "how-to-get-more-google-reviews"
 category: "getting-found"
 primaryKeyword: "how to get more google reviews"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-02"
 related: ["google-business-profile-for-trades", "business-not-showing-on-google"]
 faq:
   - q: "Can I offer a discount for a Google review?"
@@ -16,6 +14,8 @@ faq:
     a: "No. Google's policy says businesses may not selectively ask for positive reviews. You can ask every customer for an honest review, as long as you don't try to influence what they say or filter out unhappy customers first."
   - q: "How do I send customers a link to leave a Google review?"
     a: "Google lets you create a review link or QR code from your Business Profile. You can text or email the link to customers after a job, or print the QR code on invoices and leaflets."
+published: "2026-11-02"
+updated: "2026-11-02"
 ---
 You've got dozens of happy customers. They thanked you at the door. Some of them sent a lovely text afterwards.
 
