@@ -6,8 +6,6 @@ slug: "wix-squarespace-or-custom-website"
 category: "costs-and-planning"
 primaryKeyword: "wix vs squarespace vs custom website"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-03"
 related: ["small-business-website-cost-uk", "do-i-need-a-website-if-i-have-facebook"]
 faq:
   - q: "Is Wix or Squarespace good enough for a small business?"
@@ -16,6 +14,8 @@ faq:
     a: "You can keep your domain name if it's registered in your name, but the website itself is built on the platform's own system. Moving usually means rebuilding the design and pages somewhere else, even if you can export some content."
   - q: "Is a custom website better for SEO than Wix or Squarespace?"
     a: "Not automatically. Google ranks pages on how useful and relevant they are, not on which tool built them. A custom site gives you full control over speed and structure, but a well-written builder site can outrank a badly written custom one."
+published: "2026-11-03"
+updated: "2026-11-03"
 ---
 You've decided you need a website. Now you're stuck on how.
 
