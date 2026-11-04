@@ -6,8 +6,6 @@ slug: "small-business-homepage-what-to-include"
 category: "more-enquiries"
 primaryKeyword: "what to put on a small business homepage"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-04"
 related: ["website-not-getting-enquiries", "plumber-website-what-to-include"]
 faq:
   - q: "What is the most important thing on a homepage?"
@@ -16,6 +14,8 @@ faq:
     a: "Long enough to answer the questions customers have before contacting you, and no longer. For most local businesses that means a clear opening section, a summary of services, some proof you're trustworthy, a short explanation of how working with you goes, and a contact section."
   - q: "Should I put my prices on the homepage?"
     a: "If your prices are simple, a short summary or starting price on the homepage can help visitors decide to get in touch. If they're more complex, link to a pricing or services page that explains how you price."
+published: "2026-11-04"
+updated: "2026-11-04"
 ---
 Your homepage isn't read like a book. Nobody starts at the top, reads every word and arrives at the bottom ready to call.
 
