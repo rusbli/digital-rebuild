@@ -6,8 +6,6 @@ slug: "who-owns-my-website"
 category: "costs-and-planning"
 primaryKeyword: "who owns my website and domain"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-05"
 related: ["small-business-website-cost-uk", "wix-squarespace-or-custom-website"]
 faq:
   - q: "How do I find out who owns my domain name?"
@@ -16,6 +14,8 @@ faq:
     a: "If the domain is registered in their name or held in their account, it can be very hard to take it with you. That's why it should be registered in your name, ideally in an account you control, from the start."
   - q: "What should I get from my web designer when a site is finished?"
     a: "At minimum: confirmation the domain is in your name, the login for the domain account, access to the hosting or a copy of the website files, and logins for any tools set up for you, such as Google Analytics and Google Search Console."
+published: "2026-11-05"
+updated: "2026-11-05"
 ---
 Here's a story that plays out more often than it should.
 
