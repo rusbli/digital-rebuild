@@ -6,8 +6,6 @@ slug: "hiring-a-web-designer-cardiff"
 category: "costs-and-planning"
 primaryKeyword: "hiring a web designer in cardiff"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-06"
 related: ["small-business-website-cost-uk", "who-owns-my-website", "wix-squarespace-or-custom-website"]
 faq:
   - q: "Does it matter if my web designer is local?"
@@ -16,6 +14,8 @@ faq:
     a: "Ask what's included in the price, what you'll pay every year after launch, who will own the domain and files, how long the project will take, what happens after launch, and to see examples of similar work."
   - q: "How long does it take to build a small business website?"
     a: "It varies by designer and project. A small brochure site can often be done in a few weeks if you supply text and photos promptly. Ask each designer for a timeline and what they need from you to stick to it."
+published: "2026-11-06"
+updated: "2026-11-06"
 ---
 If you search for a web designer in Cardiff, you'll find plenty. Agencies with smart offices in the city centre. Freelancers working from home in Penarth or Pontypridd. Designers who'll never meet you at all.
 
