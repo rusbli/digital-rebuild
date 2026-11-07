@@ -6,8 +6,6 @@ slug: "signs-your-website-needs-a-rebuild"
 category: "costs-and-planning"
 primaryKeyword: "signs your website needs a rebuild"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-07"
 related: ["website-not-getting-enquiries", "who-owns-my-website", "small-business-website-cost-uk"]
 faq:
   - q: "How often should a small business website be rebuilt?"
@@ -16,6 +14,8 @@ faq:
     a: "Small problems, like an unclear headline, a broken form or missing contact details, are usually cheaper to fix. If many things are wrong at once, or the site is built on something that's hard to change, a rebuild can cost less in the long run than repeated fixes."
   - q: "Will rebuilding my website hurt my Google rankings?"
     a: "It can if it's done carelessly, for example if old page addresses disappear without being redirected. A careful rebuild keeps or redirects important pages, keeps useful content, and checks Google Search Console after launch."
+published: "2026-11-07"
+updated: "2026-11-07"
 ---
 Your website isn't brilliant. You know it. Maybe it looks dated, or it's fiddly to update, or the phone hasn't rung from it in months.
 
