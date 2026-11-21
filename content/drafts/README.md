@@ -4,8 +4,7 @@ Drafts waiting to be published. Nothing in this folder is live, and commits that
 
 Publishing is automatic and daily. `content/publishing.json` sets `requireApproval` to `false`, so `npm run publish-next` publishes the earliest draft that is due, at most one per day.
 
-- Hermes's full instructions, including how to write new articles: [docs/hermes-daily-articles.md](../../docs/hermes-daily-articles.md)
-- The one-time message that sets Hermes up: [docs/hermes-setup-message.md](../../docs/hermes-setup-message.md)
+- Supply the next Claude batch here on `main`. See the [daily publishing playbook](../../docs/hermes-daily-articles.md) for article format and checks.
 
 ## Commands
 

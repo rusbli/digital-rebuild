@@ -1,6 +1,9 @@
 # Daily articles playbook for Hermes
 
-You are running the daily article pipeline for Digital Rebuild (https://www.digitalrebuild.co.uk), Russell Blight's web design business in Barry, South Wales. Every day you publish one article and write one new draft, so the site gains a useful new page daily and the queue never runs dry.
+The daily publisher for Digital Rebuild (https://www.digitalrebuild.co.uk) publishes
+one supplied article at a time. Russell supplies drafts from Claude in
+`content/drafts/` on `main`. The scheduled job picks up those files at 07:00
+Europe/London. The authoring guide below applies to the supplied drafts.
 
 Read this whole file at the start of every daily run. It is the source of truth and may have been updated since your last run.
 
@@ -16,13 +19,16 @@ Helping comes first. An article that is honest and useful will win more customer
 
 ## The daily run (07:00 Europe/London)
 
-Do these steps in order. If a step fails, follow the failure rule for that step and still send the Telegram report at the end.
+The VPS job runs the maintained script in `ops/digital-rebuild-daily-publish.py`.
+It synchronises the checkout first. If the queue is empty, the report asks for
+the next batch and the job skips dependency installation and deployment.
 
 ### Step 1: get up to date
 
 ```bash
 git checkout main
 git pull --ff-only
+git push --dry-run origin HEAD:refs/heads/main  # when drafts are queued
 npm ci --no-audit --no-fund
 ```
 
@@ -35,16 +41,14 @@ npm run publish-next
 ```
 
 - `PUBLISHED: <slug>` means a draft moved into `content/articles/`. Run `npm run build`. If it passes, commit only the files under `content/` with the message `content: publish <slug>`, then `git push origin main`.
-- `NOTHING PUBLISHED: ...` means nothing was due or something already went live today. Note the reason for the report and carry on to step 3.
-- If `npm run build` fails, run `git checkout -- content && git clean -fd content`, put the error in the report, and carry on to step 3.
+- `NOTHING PUBLISHED: ...` means a draft is scheduled for later, approval is pending or an article is already dated today. The report includes the reason.
+- If the build fails, the runner restores the draft and removes the file it created when those are the only changes. It reports the build error.
 
 `publish-next` never publishes more than one article per day, so running it twice is safe.
 
-### Step 3: write one new draft
+### Supplying the next batch from Claude
 
-Skip this step if `npm run drafts` shows 14 or more drafts queued.
-
-Otherwise write exactly one new article by following "How to write an article" below. Then:
+Use "How to write an article" below for each draft, then:
 
 ```bash
 npm run next-date      # use this date as the draft's scheduled date
@@ -53,16 +57,15 @@ npm run check          # must print "valid" with no errors
 
 Fix every error that `npm run check` reports and run it again until it passes. Read the warnings and fix any that are reasonable.
 
-Commit only the new file in `content/drafts/` with the message `content: draft <slug>` and push. Draft commits do not deploy anything.
-
-If you cannot produce an article that meets the standard today, for example because you could not verify the facts, do not commit a weak one. Say so in the report. The queue has spare days for exactly this.
+Commit the supplied Markdown files in `content/drafts/` and push to `main`.
+Draft-only commits do not trigger an IONOS deployment.
 
 ### Step 4: check the deploy
 
-If you published in step 2, wait 3 minutes, then check:
+After pushing an article, the scheduled job checks:
 
 - The live URL printed by `publish-next` returns HTTP 200.
-- The latest "Deploy website to IONOS" run on GitHub succeeded (`gh run list -L 1` if the GitHub CLI is available).
+- The "Deploy website to IONOS" run for that exact commit succeeded.
 
 ### Step 5: report to Russell in Telegram
 
@@ -71,7 +74,6 @@ One short message:
 ```
 Website article report, <date>
 Published: <title> <live URL>   (or: Nothing published, <reason>)
-New draft: <title>, scheduled <date>   (or: No draft written, <reason>)
 Queue: <n> drafts, covering until <last scheduled date>
 Deploy: OK   (or the problem)
 ```

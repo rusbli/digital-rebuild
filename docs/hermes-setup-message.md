@@ -1,5 +1,9 @@
 # Message to send to Hermes (one time)
 
+This is the original setup prompt. The running job now follows the
+[supplied-draft workflow](hermes-daily-articles.md) and only publishes Markdown
+articles supplied on `main`.
+
 Copy everything between the lines below and send it to Hermes in Telegram, ideally in a topic called "Website Articles". Hermes will set itself up, run the job once as a test and then repeat it every day.
 
 ---
