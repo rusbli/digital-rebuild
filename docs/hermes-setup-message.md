@@ -1,6 +1,6 @@
 # Message to send to Hermes (one time)
 
-This is the original setup prompt. The running job now follows the
+This is the original setup prompt. For twice-daily publishing, see [hermes-twice-daily-message.md](hermes-twice-daily-message.md). The running job follows the
 [supplied-draft workflow](hermes-daily-articles.md) and only publishes Markdown
 articles supplied on `main`.
 

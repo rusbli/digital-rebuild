@@ -1,9 +1,9 @@
 # Daily articles playbook for Hermes
 
-The daily publisher for Digital Rebuild (https://www.digitalrebuild.co.uk) publishes
-one supplied article at a time. Russell supplies drafts from Claude in
-`content/drafts/` on `main`. The scheduled job picks up those files at 07:00
-Europe/London. The authoring guide below applies to the supplied drafts.
+The publisher for Digital Rebuild (https://www.digitalrebuild.co.uk) publishes
+one supplied article per run, twice a day. Russell supplies drafts from Claude in
+`content/drafts/` on `main`, scheduled two per day. The scheduled job runs at 07:00
+and 17:00 Europe/London. The authoring guide below applies to the supplied drafts.
 
 Read this whole file at the start of every daily run. It is the source of truth and may have been updated since your last run.
 
@@ -17,7 +17,7 @@ The readers are UK small business owners, sole traders and tradespeople (plumber
 
 Helping comes first. An article that is honest and useful will win more customers over time than one that sells hard.
 
-## The daily run (07:00 Europe/London)
+## Each run (07:00 and 17:00 Europe/London)
 
 The VPS job runs the maintained script in `ops/digital-rebuild-daily-publish.py`.
 It synchronises the checkout first. If the queue is empty, the report asks for
@@ -41,10 +41,10 @@ npm run publish-next
 ```
 
 - `PUBLISHED: <slug>` means a draft moved into `content/articles/`. Run `npm run build`. If it passes, commit only the files under `content/` with the message `content: publish <slug>`, then `git push origin main`.
-- `NOTHING PUBLISHED: ...` means a draft is scheduled for later, approval is pending or an article is already dated today. The report includes the reason.
+- `NOTHING PUBLISHED: ...` means no draft is due yet, approval is pending, or today's limit of two is reached. The report includes the reason.
 - If the build fails, the runner restores the draft and removes the file it created when those are the only changes. It reports the build error.
 
-`publish-next` never publishes more than one article per day, so running it twice is safe.
+Each run publishes at most one article. `publish-next` also stops once `perDay` articles (set to 2 in `content/publishing.json`) have gone live on the same day, so an extra run is safe.
 
 ### Supplying the next batch from Claude
 
@@ -197,35 +197,25 @@ Em dashes and emojis. Delve, tapestry, landscape (as a metaphor), testament, piv
 
 ## Topic backlog
 
-Work from the top. Delete each idea when you use it. Check it against existing articles first.
+The 60 drafts supplied on 21 November 2026 used the previous backlog. These ideas are not yet written. Check each against existing articles first, and delete it when used.
 
-1. What to put on a website for electricians (getting customers to call)
-2. How to write a services page that brings in enquiries
-3. Google Search Console for small businesses: the three reports worth checking
-4. Do I need a cookie banner on my small business website? (use ICO guidance)
-5. Website for cleaners and domestic cleaning businesses: what to include
-6. How to take photos of your work for your website with just a phone
-7. Do you need a separate page for every town you cover?
-8. How fast should a small business website load, and how to check yours
-9. Online booking for small businesses: built into your website or a separate tool?
-10. What a builder's or kitchen fitter's website needs to win bigger jobs
-11. What to put on your about page so people trust you
-12. How to choose a domain name for a small business (.co.uk or .com?)
-13. Business email with your own domain: why it matters and how to set it up
-14. How to write a contact form that people actually fill in
-15. Should a small business website show prices?
-16. What to do when someone leaves you a bad Google review
-17. Website for cafés and restaurants: what customers look for first
-18. How to tell if your web designer has done the SEO basics
-19. Website for hairdressers and beauty salons: what to include
-20. Does my small business need a privacy policy? (use ICO guidance)
-21. How to get your business listed in local directories without wasting money
-22. Mobile-friendly website checklist for small businesses
-23. Website for landscapers and gardeners: what to include
-24. How to use Google Analytics without getting lost: the few numbers that matter
-25. Should you use a .wales or .cymru domain for a Welsh business?
-26. How much should a website care plan cost, and what should it include?
-27. What happens to my website if my web designer disappears?
-28. Website copy for tradespeople: how to describe your services in plain English
-29. Accessibility basics for small business websites
-30. How to move your website to a new designer without losing your Google rankings
+1. What a dog groomer's website needs
+2. What a mobile mechanic's or garage's website needs
+3. What a bookkeeper's or accountant's website needs
+4. What a carpenter's or joiner's website needs
+5. Tattoo studio websites in Wales: licensing, portfolios and booking
+6. Holiday let websites: taking direct bookings
+7. What a wedding photographer's website needs
+8. What a locksmith's website needs to be trusted
+9. What a window cleaner's website needs
+10. What a plasterer's website needs
+11. How to write an FAQ page that answers real questions
+12. Testimonials or case studies: which persuade customers more?
+13. Email newsletters for small businesses: are they worth it?
+14. Local Facebook groups and Nextdoor: getting work without spamming
+15. How fast should you reply to website enquiries?
+16. A seasonal content calendar for trades
+17. What to do when your website goes down
+18. How to choose web hosting for a small UK business
+19. Before-and-after galleries: how to present your work
+20. How to describe your service area on your website

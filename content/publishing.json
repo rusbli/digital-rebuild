@@ -1,3 +1,4 @@
 {
-  "requireApproval": false
+  "requireApproval": false,
+  "perDay": 2
 }
