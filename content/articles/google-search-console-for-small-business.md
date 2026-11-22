@@ -6,8 +6,6 @@ slug: "google-search-console-for-small-business"
 category: "getting-found"
 primaryKeyword: "google search console for small business"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-22"
 related: ["business-not-showing-on-google", "website-not-getting-enquiries"]
 faq:
   - q: "Is Google Search Console free?"
@@ -16,6 +14,8 @@ faq:
     a: "Search Console shows what happens before someone reaches your site: which Google searches showed your pages and how many people clicked. Google Analytics shows what visitors do once they arrive. Most small businesses benefit from both."
   - q: "How often should I check Search Console?"
     a: "Once a month is plenty for most small businesses. Check sooner if you've just launched a new site, added important pages, or Google emails you about a problem."
+published: "2026-11-22"
+updated: "2026-11-22"
 ---
 Most small business owners have heard of Google Search Console. Very few open it.
 
