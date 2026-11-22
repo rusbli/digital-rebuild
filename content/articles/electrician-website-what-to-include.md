@@ -6,8 +6,6 @@ slug: "electrician-website-what-to-include"
 category: "more-enquiries"
 primaryKeyword: "electrician website"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-22"
 related: ["plumber-website-what-to-include", "website-not-getting-enquiries", "google-business-profile-for-trades"]
 faq:
   - q: "What should an electrician put on their website?"
@@ -16,6 +14,8 @@ faq:
     a: "If you're registered with a competent person scheme, yes. Show the scheme and your membership details so customers can check you on the Electrical Competent Person Register. Many homeowners look for this before they call."
   - q: "Do electricians need separate pages for each service?"
     a: "For your main money-making services, yes. A rewire, a consumer unit upgrade and an EV charger installation are different jobs with different customers. Separate pages answer each customer's questions and give Google something specific to match."
+published: "2026-11-22"
+updated: "2026-11-22"
 ---
 Nobody browses electricians for fun.
 
