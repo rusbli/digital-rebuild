@@ -6,8 +6,6 @@ slug: "should-you-show-prices-on-your-website"
 category: "more-enquiries"
 primaryKeyword: "should i put prices on my website"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-23"
 related: ["small-business-website-cost-uk", "website-not-getting-enquiries", "electrician-website-what-to-include"]
 faq:
   - q: "Will showing prices on my website lose me customers?"
@@ -16,6 +14,8 @@ faq:
     a: "Use starting prices, typical ranges for common jobs, or a clear explanation of how you work out a quote. Even 'most jobs like this cost between £X and £Y' is more useful than no information at all."
   - q: "Should I worry about competitors seeing my prices?"
     a: "Competitors can find out your prices anyway by asking for a quote. Customers can't easily find out without contacting you, and many won't bother. Hiding prices usually costs you more customers than it protects you from competitors."
+published: "2026-11-23"
+updated: "2026-11-23"
 ---
 You've probably had this argument with yourself.
 
