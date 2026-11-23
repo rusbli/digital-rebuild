@@ -6,8 +6,6 @@ slug: "choosing-a-domain-name-uk"
 category: "costs-and-planning"
 primaryKeyword: "co.uk or .com for small business"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-23"
 related: ["who-owns-my-website", "small-business-website-cost-uk"]
 faq:
   - q: "Should a UK business use .co.uk or .com?"
@@ -16,6 +14,8 @@ faq:
     a: "You can, but you don't need to. A short, memorable domain based on your business name is usually better than a long one stuffed with words like 'best' or 'cheap'. What's on your pages matters far more to Google than the domain."
   - q: "Who should register my domain name?"
     a: "You should, or someone acting for you with the domain registered in your name, in an account you can log in to. The registrant is the legal holder of the domain, so it should be you or your business."
+published: "2026-11-23"
+updated: "2026-11-23"
 ---
 Your domain name ends up everywhere. On your van, your invoices, your business cards, your email address and every listing you ever create.
 
