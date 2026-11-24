@@ -6,8 +6,6 @@ slug: "services-page-that-gets-enquiries"
 category: "more-enquiries"
 primaryKeyword: "how to write a services page"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-24"
 related: ["small-business-homepage-what-to-include", "should-you-show-prices-on-your-website", "electrician-website-what-to-include"]
 faq:
   - q: "Should I have one services page or one page per service?"
@@ -16,6 +14,8 @@ faq:
     a: "Long enough to answer the questions a customer has before contacting you: what's included, who it's for, how it works, what it costs and why choose you. For most services that's a few hundred words plus photos, not a long essay."
   - q: "What is the most important part of a services page?"
     a: "The opening lines and the call to action. The top of the page should say exactly what the service is and where you offer it, and there should be a clear way to get in touch both near the top and at the end."
+published: "2026-11-24"
+updated: "2026-11-24"
 ---
 Most small business services pages look the same.
 
