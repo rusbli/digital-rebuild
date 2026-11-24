@@ -6,8 +6,6 @@ slug: "how-to-show-up-in-near-me-searches"
 category: "getting-found"
 primaryKeyword: "how to show up in near me searches"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-24"
 related: ["google-business-profile-for-trades", "how-to-get-more-google-reviews", "google-search-console-for-small-business"]
 faq:
   - q: "Do I need to put 'near me' on my website?"
@@ -16,6 +14,8 @@ faq:
     a: "Distance is only one of the factors Google uses. Google's help pages say relevance and prominence also matter, so a business with a more complete profile, better-matched categories or more reviews can appear above a closer one."
   - q: "Can I pay to appear in near-me searches?"
     a: "You can pay for Google Ads, which appear as sponsored results. Google says there's no way to request or pay for a better position in its unpaid local results."
+published: "2026-11-24"
+updated: "2026-11-24"
 ---
 "Electrician near me." "Cafe near me open now." "Dog groomer near me."
 
