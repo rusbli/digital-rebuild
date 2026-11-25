@@ -6,8 +6,6 @@ slug: "responding-to-a-bad-google-review"
 category: "getting-found"
 primaryKeyword: "how to respond to a bad google review"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-25"
 related: ["how-to-get-more-google-reviews", "google-business-profile-for-trades", "how-to-show-up-in-near-me-searches"]
 faq:
   - q: "Should I reply to negative Google reviews?"
@@ -16,6 +14,8 @@ faq:
     a: "Only if it breaks Google's policies, for example if it's fake, from someone who was never a customer, or contains offensive content. You can report it through your Business Profile and Google decides. A review being negative or unfair isn't enough on its own."
   - q: "How quickly should I reply to a bad review?"
     a: "Within a few days is good, but not in the first angry hour. Give yourself time to calm down and check the facts, then reply."
+published: "2026-11-25"
+updated: "2026-11-25"
 ---
 It always arrives at the worst moment. You're between jobs, you check your phone, and there it is: one star, and a paragraph that makes your stomach drop.
 
