@@ -6,8 +6,6 @@ slug: "do-i-need-a-cookie-banner"
 category: "costs-and-planning"
 primaryKeyword: "do i need a cookie banner uk"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-25"
 related: ["choosing-a-domain-name-uk", "who-owns-my-website"]
 faq:
   - q: "Does every UK website need a cookie banner?"
@@ -16,6 +14,8 @@ faq:
     a: "The 2026 changes added an exception for some statistical analytics, but it only applies if the analytics are used solely to improve your own site and you give people clear information and an easy way to object. If your analytics data is also used for other purposes, such as advertising, you need consent. Check the ICO's guidance against your own set-up."
   - q: "Who enforces the cookie rules?"
     a: "The Information Commissioner's Office (ICO) enforces the rules on cookies and similar technologies in the UK, under the Privacy and Electronic Communications Regulations (PECR)."
+published: "2026-11-25"
+updated: "2026-11-25"
 ---
 You've seen them on almost every website: the box that pops up asking you to accept cookies.
 
