@@ -6,8 +6,6 @@ slug: "cleaning-business-website"
 category: "more-enquiries"
 primaryKeyword: "cleaning business website"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-26"
 related: ["should-you-show-prices-on-your-website", "services-page-that-gets-enquiries", "how-to-get-more-google-reviews"]
 faq:
   - q: "What should a cleaning company website include?"
@@ -16,6 +14,8 @@ faq:
     a: "Yes, if possible. An hourly rate, a starting price for a typical home, or prices for one-off cleans help customers decide whether to get in touch. If prices depend on the property, explain how you quote."
   - q: "How can a cleaning business build trust online?"
     a: "Show real people, genuine reviews, the insurance you hold, how you handle keys and access, and what happens if something isn't right. Customers are letting you into their home or workplace, so honesty about these details matters more than fancy design."
+published: "2026-11-26"
+updated: "2026-11-26"
 ---
 Hiring a cleaner is an oddly personal decision.
 
