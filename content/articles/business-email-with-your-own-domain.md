@@ -6,8 +6,6 @@ slug: "business-email-with-your-own-domain"
 category: "costs-and-planning"
 primaryKeyword: "business email address with own domain"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-26"
 related: ["choosing-a-domain-name-uk", "who-owns-my-website", "small-business-website-cost-uk"]
 faq:
   - q: "Do I need a website to have a business email address?"
@@ -16,6 +14,8 @@ faq:
     a: "Usually, yes. Business email services from the big providers let you use their familiar apps with your own domain. Many email hosts also work with the mail app already on your phone."
   - q: "What happens to my email if I change web designer?"
     a: "If your email is set up on your own domain, in an account you control, it shouldn't be affected. Problems arise when the domain or the email account is held by someone else, which is why ownership matters."
+published: "2026-11-26"
+updated: "2026-11-26"
 ---
 "Please send the quote to dave.plumbing1987@..."
 
