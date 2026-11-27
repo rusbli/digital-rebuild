@@ -6,8 +6,6 @@ slug: "about-page-for-small-business"
 category: "more-enquiries"
 primaryKeyword: "what to put on an about page"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-27"
 related: ["small-business-homepage-what-to-include", "services-page-that-gets-enquiries", "cleaning-business-website"]
 faq:
   - q: "What should a small business about page include?"
@@ -16,6 +14,8 @@ faq:
     a: "For a sole trader or very small team, first person ('I') usually feels more honest and personal. For a larger team, 'we' is fine, but still introduce the real people."
   - q: "How long should an about page be?"
     a: "A few hundred words is usually enough. It should be long enough to give people a sense of who you are and why they can trust you, but not so long that it becomes a life story."
+published: "2026-11-27"
+updated: "2026-11-27"
 ---
 Here's something most small business owners don't realise: the about page is often one of the most visited pages on a small business website.
 
