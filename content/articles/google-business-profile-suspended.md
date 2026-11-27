@@ -6,8 +6,6 @@ slug: "google-business-profile-suspended"
 category: "getting-found"
 primaryKeyword: "google business profile suspended"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-27"
 related: ["google-business-profile-for-trades", "how-to-show-up-in-near-me-searches", "responding-to-a-bad-google-review"]
 faq:
   - q: "Why was my Google Business Profile suspended?"
@@ -16,6 +14,8 @@ faq:
     a: "Use Google's appeals process from your Business Profile or its help pages. Fix anything that breaks the guidelines first, then submit evidence that your business is real and eligible, such as registration documents, a business licence or utility bills."
   - q: "Should I create a new profile if mine is suspended?"
     a: "No. Creating a duplicate profile breaks Google's guidelines and can make things worse. Fix the problem and appeal the existing profile instead."
+published: "2026-11-27"
+updated: "2026-11-27"
 ---
 One morning the calls stop. You search for your business and your listing has gone from the map. Or you log in and see a message saying your profile has been suspended.
 
