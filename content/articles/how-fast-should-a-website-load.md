@@ -6,8 +6,6 @@ slug: "how-fast-should-a-website-load"
 category: "getting-found"
 primaryKeyword: "how fast should a website load"
 author: "Russell Blight"
-status: "draft"
-scheduled: "2026-11-28"
 related: ["website-not-getting-enquiries", "signs-your-website-needs-a-rebuild", "google-search-console-for-small-business"]
 faq:
   - q: "What is a good page load time for a small business website?"
@@ -16,6 +14,8 @@ faq:
     a: "Use Google's PageSpeed Insights at pagespeed.web.dev. Enter your web address and look at the mobile results, which show real-visitor data where available and a list of suggested improvements."
   - q: "What usually slows down a small business website?"
     a: "Oversized images are the most common cause. Others include lots of plugins or third-party scripts, heavy page builders, slow hosting and embedded videos or widgets loading on every page."
+published: "2026-11-28"
+updated: "2026-11-28"
 ---
 You open your website on your office Wi-Fi and it appears instantly. Job done.
 
